@@ -5,6 +5,21 @@ function domAdd(){
 }
 */
 
+const showDice = () =>{
+    const n = Math.floor(Math.random()*6) + 1
+    const s1 = document.querySelector("#s1")
+
+    s1.innerHTML = `<img src=./images/${n}.png>`
+    console.log(n)
+}
+
+
+
+
+
+
+
+
 // const 상수 정의, const : 변수의 내용이 바뀌지 않음 , let은 바뀌는 것
 const domAdd = () => {
     console.log('domAdd');
@@ -70,13 +85,15 @@ const domRead = () => {
 
 }
 
+
+
 // click 함수
-const clickBtn = (div0, bt0) => {
-    bt0.addEventListener("click", ()=> {
-        div0.innerHTML = `<h1>${bt0.innerHTML}</h1>`;
-        console.log(bt0.innerHTML);
-    });
-}
+// const clickBtn = (div0, bt0) => {
+//     bt0.addEventListener("click", ()=> {
+//         div0.innerHTML = `<h1>${bt0.innerHTML}</h1>`;
+//         console.log(bt0.innerHTML);
+//     });
+// }
 
 // DOM 요소 수정
 const domUpdate = () => {
@@ -119,7 +136,8 @@ const domUpdate = () => {
     for( let bt of btc ){
         console.log(bt);
         bt.addEventListener("click", ()=> {
-            div1.innerHTML = `<h1>${bt.innerHTML}</h1>`;
+            var rd = Math.floor((Math.random()*6-1)+2);
+            div1.innerHTML = `<h1><img src="images/${rd}.png" width="200"></h1>`;
             console.log(bt.innerHTML);
         });
     }
