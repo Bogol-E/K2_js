@@ -49,9 +49,28 @@ button:active, button:hover {
 
 section {
     width: 50%;
-    height: 30vh;
+    height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
     
+}
+
+#s3 input {
+    margin: 1vh;
+    width : 50vw;
+    max-width: 200px;
+    border: none;
+    border-radius: 5px;
+    background-color: #D0BCFF;
+    color: #4A4458;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#s3 input:active, #s3 input:hover {
+    color: #D0BCFF;
+    background-color: #4A4458;
 }
